@@ -73,4 +73,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("sphamba/smear-cursor.nvim")
+	--use("github/copilot.vim")
+	use("brenoprata10/nvim-highlight-colors")
+	use("hoscarcito/cursor-nvim-plugin")
 end)

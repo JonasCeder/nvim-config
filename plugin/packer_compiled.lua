@@ -111,6 +111,11 @@ _G.packer_plugins = {
     path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
+  ["cursor-nvim-plugin"] = {
+    loaded = true,
+    path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/cursor-nvim-plugin",
+    url = "https://github.com/hoscarcito/cursor-nvim-plugin"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -150,6 +155,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-highlight-colors"] = {
+    loaded = true,
+    path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
+    url = "https://github.com/brenoprata10/nvim-highlight-colors"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
