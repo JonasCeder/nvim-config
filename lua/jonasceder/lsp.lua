@@ -462,8 +462,39 @@ vim.lsp.config.eslint = {}
 
 vim.lsp.enable({ "ts_ls", "cssls", "tailwindcssls", "htmlls", "eslint" })
 
--- }}}
+--
+--}}}
 
+-- C# {{{
+vim.lsp.config("omnisharp", {
+	on_attach = function()
+		print("This will run when the server attaches!")
+	end,
+	cmd = {
+		"omnisharp",
+		"-z",
+		"--hostPID",
+		"12345",
+		"DotNet:enablePackageRestore=false",
+		"--encoding",
+		"utf-8",
+		"--languageserver",
+	},
+	filetypes = { "cs", "vb" },
+	settings = {
+		FormattingOptions = {
+			EnableEditorConfigSupport = true,
+		},
+		MsBuild = {},
+		RenameOptions = {},
+		RoslynExtensionsOptions = {},
+		Sdk = {
+			IncludePrereleases = false,
+		},
+	},
+})
+vim.lsp.enable("omnisharp")
+-- }}}
 -- }}}
 
 -- Start, Stop, Restart, Log commands {{{

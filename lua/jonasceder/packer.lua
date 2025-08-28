@@ -76,13 +76,13 @@ return require("packer").startup(function(use)
 	--use("github/copilot.vim")
 	use("brenoprata10/nvim-highlight-colors")
 	use("hoscarcito/cursor-nvim-plugin")
-  use({
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
-})
+	use({
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
 end)
