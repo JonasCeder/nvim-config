@@ -111,6 +111,11 @@ _G.packer_plugins = {
     path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["cursor-nvim-plugin"] = {
     loaded = true,
     path = "/Users/jonascederkvist/.local/share/nvim/site/pack/packer/start/cursor-nvim-plugin",
