@@ -460,7 +460,13 @@ vim.lsp.config.htmlls = {
 vim.lsp.config.eslint = {}
 -- }}}
 
-vim.lsp.enable({ "ts_ls", "cssls", "tailwindcssls", "htmlls", "eslint" })
+-- Grapql {{{
+vim.lsp.config.graphql = {
+	filetypes = { "grapql" },
+}
+-- }}}
+
+vim.lsp.enable({ "ts_ls", "cssls", "tailwindcssls", "htmlls", "eslint", "graphql" })
 
 --
 --}}}

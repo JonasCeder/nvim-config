@@ -12,21 +12,29 @@ return require("packer").startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-	-- use({
-	-- 'rose-pine/neovim',
-	-- as = 'rose-pine',
-	-- config = function()
-	-- vim.cmd('colorscheme rose-pine')
-	-- end
-	-- })
 
 	use({
-		"catppuccin/nvim",
-		as = "catppuccin",
+		"Shatur/neovim-ayu",
+		as = "ayu",
 		config = function()
-			vim.cmd("colorscheme catppuccin")
+			vim.cmd("colorscheme ayu")
 		end,
 	})
+	-- use({
+	-- 	"rose-pine/neovim",
+	-- 	as = "rose-pine",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme rose-pine")
+	-- 	end,
+	-- })
+
+	-- use({
+	-- 	"catppuccin/nvim",
+	-- 	as = "catppuccin",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme catppuccin")
+	-- 	end,
+	-- })
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
@@ -73,7 +81,20 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("sphamba/smear-cursor.nvim")
-	use("github/copilot.vim")
+	use({
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({})
+		end,
+	})
+	use({
+		"zbirenbaum/copilot-cmp",
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
 	use("brenoprata10/nvim-highlight-colors")
 	use("hoscarcito/cursor-nvim-plugin")
 	use({
