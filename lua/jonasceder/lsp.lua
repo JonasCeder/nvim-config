@@ -161,13 +161,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     -- diagnostic mappings
     keymap("n", "<Leader>dq", function()
-      local ok, diag = pcall(require, "rj.extras.workspace-diagnostic")
-      if ok then
-        for _, cur_client in ipairs(vim.lsp.get_clients({ bufnr = 0 })) do
-          diag.populate_workspace_diagnostics(cur_client, 0)
+        for _, client in ipairs(vim.lsp.buf_get_clients()) do
+            require("workspace-diagnostics").populate_workspace_diagnostics(client, 0)
         end
         vim.notify("INFO: Diagnostic populated")
-      end
     end, opt("Popluate diagnostic for the whole workspace"))
     keymap("n", "<Leader>dn", function() vim.diagnostic.jump({ count = 1, float = true }) end, opt("Next Diagnostic"))
     keymap("n", "<Leader>dp", function() vim.diagnostic.jump({ count =-1, float = true }) end, opt("Prev Diagnostic"))
