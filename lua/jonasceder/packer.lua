@@ -106,4 +106,5 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+	use({ "artemave/workspace-diagnostics.nvim" })
 end)
